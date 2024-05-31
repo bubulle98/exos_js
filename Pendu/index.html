@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Pendu</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Le Pendu</h1>
+    </header>
+    <main>
+      <div class="image-div">
+        <img src="./images/Hangman-0.png" alt="pendu" />
+      </div>
+      <div class="word-div"></div>
+      <div class="input-div">
+        <input type="text" required minlength="1" maxlength="1"/>
+        <button>Submit letter</button>
+      </div>
+      <div class="lowest-box">
+        <div class="letters-div">
+          <p>Wrong letters: <span class="letters-p"></span></p>
+        </div>
+        <div class="result-div"><p>Submit a letter</p></div>
+      </div>
+    </main>
+  </body>
+</html>

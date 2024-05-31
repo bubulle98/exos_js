@@ -1,0 +1,17 @@
+Créer le jeu du pendu :
+
+Piocher un mot aléatoire dans la liste de mots fournie.
+
+Grâce à un input, permettre à l'utilisateur de proposer une lettre
+Si la lettre est bien une lettre et n'a pas déjà été proposée, vérifier si la lettre est présente dans le mot. (attention aux espaces vides de l'utilisateur, à la casse)
+Si oui : Afficher toutes les occurences de la lettre sur l'écran
+Si non : Compter une faute et faire avancer le dessin du pendu
+
+La fin de la partie arrive si 
+	- Le joueur a deviné le mot avant la pendaison
+	- Le pendu est pendu
+
+Bonus : 
+Permettre de faire plusieurs parties et compter toutes les parties gagnées/perdues
+Si le joueur quitte la partie en cours, elle est comptée comme perdue
+

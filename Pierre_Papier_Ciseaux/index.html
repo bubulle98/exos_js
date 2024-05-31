@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pierre Feuille Ciseaux</title>
+		<link rel="stylesheet" href="style.css" />
+		<script defer src="./script.js"></script>
+	</head>
+	<body>
+		<h1>Pierre | Feuille | Ciseaux</h1>
+		<div class="main-container">
+			<div class="player-column">
+				<h2>Joueur</h2>
+				<div class="pierre selection">
+					<img src="./images/pierre.png" alt="pierre" />
+				</div>
+				<div class="feuille selection">
+					<img src="./images/feuille.png" alt="feuille" />
+				</div>
+				<div class="ciseaux selection">
+					<img src="./images/les-ciseaux.png" alt="ciseaux" />
+				</div>
+				<p class="player-score">0</p>
+			</div>
+			<div class="result">Cliquez sur une image pour jouer</div>
+			<div class="computer-column">
+				<h2>Ordinateur</h2>
+				<div class="random-selection">
+					<img
+						src="./images/point-dinterrogation.png"
+						alt="point d'interrogation"
+					/>
+				</div>
+				<p class="computer-score">0</p>
+			</div>
+		</div>
+		<div class="lower-container">
+			<div class="lower-container-column">
+				<h3>Statistiques :</h3>
+				<p>Joueur : <span class="playerStatistic">0</span></p>
+				<p>Ordinateur : <span class="computerStatistic">0</span></p>
+			</div>
+			<div class="lower-container-column">
+				<p class="rejouer">Rejouer</p>
+			</div>
+			<div class="lower-container-column">
+				<p class="effacer">Effacer</p>
+			</div>
+		</div>
+	</body>
+</html>

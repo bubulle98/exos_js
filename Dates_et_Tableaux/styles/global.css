@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    height: 100vh;
+    width: 100%;
+}
+
+.planning {
+    height: 75%;
+    width: 55%;
+
+    thead {
+        background-color: darkslategrey;
+        color : lightblue;
+        text-transform: capitalize;
+    }
+
+    th {
+        width: 12,5% ;
+        height: 3rem;
+    }
+
+    tr> td:first-child {
+        background-color: darkslategrey;
+        color : lightblue;
+    }
+
+    .html-css {
+        background-color: darkblue;
+        color : chartreuse;
+    }
+
+}
+.coworkers {
+    height: 90%;
+    width: 35%;
+
+    td,th {
+        height: 5rem;
+    }
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    thead {
+        background-color: darkslategrey;
+        color : lightblue;
+    }
+    /* nth-child(odd) -> impair */
+    /* nth-child(even) -> pair */
+    /* nth-child(Xn+Y) -> on commence à partir de Y et on répète tous les X */
+    /* nth-child(3n+2) -> On commence à partir du 2ème, et le 5ème va être coloré, 8ème aussi etc */
+    /* nth-child(4) -> Le quatrième */
+    tbody tr:nth-child(even) {
+        background-color: lightblue;
+    }
+}
+
+table, td, th {
+    border : 1px solid black;
+    border-collapse: collapse;
+}
+
