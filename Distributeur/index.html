@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Distributeur</title>
+		<link rel="stylesheet" href="./style.css" />
+		<script defer src="./script.js"></script>
+	</head>
+	<body>
+		<section class="gauche">
+			<div class="products-section">
+				<div class="products-line">
+					<div class="product">
+						<p class="stock" id="stock1">3</p>
+						<img src="./images/coca.png" alt="coca normal" />
+						<p class="nb-id">1</p>
+					</div>
+
+					<div class="product">
+						<p class="stock" id="stock2">6</p>
+						<img src="./images/light.png" alt="coca light" />
+						<p class="nb-id">2</p>
+					</div>
+
+					<div class="product">
+						<p class="stock" id="stock3">2</p>
+						<img src="./images/pepsi.png" alt="pepsi" />
+						<p class="nb-id">3</p>
+					</div>
+				</div>
+
+				<div class="products-line">
+					<div class="product">
+						<p class="stock" id="stock4">3</p>
+						<img src="./images/max.png" alt="pepsi max" />
+						<p class="nb-id">4</p>
+					</div>
+
+					<div class="product">
+						<p class="stock" id="stock5">1</p>
+						<img src="./images/fanta.png" alt="fanta" />
+						<p class="nb-id">5</p>
+					</div>
+
+					<div class="product">
+						<p class="stock" id="stock6">5</p>
+						<img src="./images/sprite.png" alt="sprite" />
+						<p class="nb-id">6</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="finished-section">
+				<img id="finished-img" src="" alt="" />
+			</div>
+		</section>
+
+		<section class="commands-section">
+			<p>Entrez votre choix</p>
+
+			<p id="number-typed"></p>
+
+			<div class="numbers-square">
+				<div class="numbers-line">
+					<button id="button1">1</button>
+					<button id="button2">2</button>
+					<button id="button3">3</button>
+				</div>
+				<div class="numbers-line">
+					<button id="button4">4</button>
+					<button id="button5">5</button>
+					<button id="button6">6</button>
+				</div>
+				<div class="numbers-line">
+					<button id="button7">7</button>
+					<button id="button8">8</button>
+					<button id="button9">9</button>
+				</div>
+			</div>
+
+			<div class="valider-reset-btns">
+				<button id="reset">Reset</button>
+				<button id="valider">Valider</button>
+			</div>
+		</section>
+	</body>
+</html>
