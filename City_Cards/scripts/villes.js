@@ -44,9 +44,22 @@ const CITIES = [
   },
 ];
 
-const MAIN = document.querySelector("main");
+const MAIN = document.querySelector(".main-container");
+const SELECT = document.querySelector("select");
+let continentCards;
 
-createAllCards(CITIES);
+createCards(CITIES);
+
+SELECT.addEventListener("change", () => {
+  MAIN.innerHTML = "";
+  if (SELECT.value === "All") {
+    createCards(CITIES);
+  } else {
+    continentCards = CITIES.filter((card) => card.continent === SELECT.value);
+    createCards(continentCards);
+  }
+});
+
 
 function createCard(myCity) {
   const CARD_DIV = document.createElement("div");
@@ -72,8 +85,8 @@ function createCard(myCity) {
   CARD_DIV.classList.add("card-div");
 }
 
-function createAllCards (CITIES_ARRAY) {
-    CITIES_ARRAY.forEach((city) => {
-        createCard(city);
-      });
+function createCards(CITIES_ARRAY) {
+  CITIES_ARRAY.forEach((city) => {
+    createCard(city);
+  });
 }
