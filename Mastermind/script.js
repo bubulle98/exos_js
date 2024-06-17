@@ -31,7 +31,7 @@ function gameInitialization() {
 	rowActivation();
 	checkButtonActivation();
 	refreshButtonActivation();
-	replayButtonActivation();
+	replayButtonActivation(REPLAY_BUTTON);
 }
 
 function computerPatternCreation() {
@@ -71,6 +71,7 @@ function checking() {
 		MODAL_CONTENT.children[0].innerText = "WARNING";
 		MODAL_CONTENT.children[1].innerText =
 			"You must select a color for each peg.";
+			MODAL_CONTENT.children[3].style.display = "none";
 		modalClosing();
 	} else {
 		redPointsNb = redPointsCounting(playerPattern, computerCopy);
@@ -140,7 +141,7 @@ function whitePointsShowing() {
 }
 
 function refreshButtonDesactivation() {
-	REFRESH_BUTTON.removeEventListener("click", allColorsRemoval);
+	REFRESH_BUTTON.removeEventListener("click", rowColorsRemoval);
 }
 
 function checkButtonDesactivation() {
@@ -181,8 +182,8 @@ function rowColorsRemoval() {
 	});
 }
 
-function replayButtonActivation() {
-	REPLAY_BUTTON.addEventListener("click", () => {
+function replayButtonActivation(button) {
+	button.addEventListener("click", () => {
 		COLOR_ROWS.forEach((row) => {
 			let rowPegs = Array.from(row.children);
 			rowPegs.forEach((peg) => {
@@ -197,12 +198,14 @@ function replayButtonActivation() {
 		});
 		rowDesactivation();
 		gameInitialization();
+		if (MODAL.style.display !== "none") {MODAL.style.display = "none";}
 	});
 }
 
 function modalContentFilling() {
 	MODAL_CONTENT.children[1].innerHTML = `The pattern was: <div class="peg" style="background-color:${computerOriginal[0]}"></div><div class="peg" style="background-color:${computerOriginal[1]}"></div><div class="peg" style="background-color:${computerOriginal[2]}"></div><div class="peg" style="background-color:${computerOriginal[3]}"></div><br>
     Click on replay to try again.`;
+	replayButtonActivation(MODAL_CONTENT.children[3]);
 }
 
 function modalClosing() {
