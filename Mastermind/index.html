@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mastermind</title>
+		<script defer src="script.js"></script>
+		<link rel="stylesheet" href="./style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=PT+Mono&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Major+Mono+Display&family=PT+Mono&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Monofett&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<h1>Mastermind</h1>
+		<div class="main-container">
+			<div class="red-points">
+				<div class="red-square-container"><div class="red-square"></div></div>
+				<div class="red-square-container"><div class="red-square"></div></div>
+				<div class="red-square-container"><div class="red-square"></div></div>
+				<div class="red-square-container"><div class="red-square"></div></div>
+				<div class="red-square-container"><div class="red-square"></div></div>
+				<div class="red-square-container"><div class="red-square"></div></div>
+				<div class="red-square-container"><div class="red-square"></div></div>
+				<div class="red-square-container"><div class="red-square"></div></div>
+				<div class="red-square-container"><div class="red-square"></div></div>
+				<div class="red-square-container"><div class="red-square"></div></div>
+				<div class="red-square-container"><div class="red-square"></div></div>
+				<div class="red-square-container"><div class="red-square"></div></div>
+			</div>
+			<div class="color-pegs">
+				<div class="color-row">
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+				</div>
+				<div class="color-row">
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+				</div>
+				<div class="color-row">
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+				</div>
+				<div class="color-row">
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+				</div>
+				<div class="color-row">
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+				</div>
+				<div class="color-row">
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+				</div>
+				<div class="color-row">
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+				</div>
+				<div class="color-row">
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+				</div>
+				<div class="color-row">
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+				</div>
+				<div class="color-row">
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+				</div>
+				<div class="color-row">
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+				</div>
+				<div class="color-row">
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+					<div class="peg"></div>
+				</div>
+			</div>
+			<div class="white-points">
+				<div class="white-square-container">
+					<div class="white-square"></div>
+				</div>
+				<div class="white-square-container">
+					<div class="white-square"></div>
+				</div>
+				<div class="white-square-container">
+					<div class="white-square"></div>
+				</div>
+				<div class="white-square-container">
+					<div class="white-square"></div>
+				</div>
+				<div class="white-square-container">
+					<div class="white-square"></div>
+				</div>
+				<div class="white-square-container">
+					<div class="white-square"></div>
+				</div>
+				<div class="white-square-container">
+					<div class="white-square"></div>
+				</div>
+				<div class="white-square-container">
+					<div class="white-square"></div>
+				</div>
+				<div class="white-square-container">
+					<div class="white-square"></div>
+				</div>
+				<div class="white-square-container">
+					<div class="white-square"></div>
+				</div>
+				<div class="white-square-container">
+					<div class="white-square"></div>
+				</div>
+				<div class="white-square-container">
+					<div class="white-square"></div>
+				</div>
+			</div>
+		</div>
+		<div class="buttons-container">
+			<button id="refresh-button">Refresh</button>
+			<button id="check-button">Check</button>
+			<button id="replay-button">Replay</button>
+		</div>
+		<div class="modal">
+			<div class="modal-content">
+				<h2></h2>
+				<div></div>
+				<span class="close">&times;</span>
+			</div>
+		</div>
+	</body>
+</html>
