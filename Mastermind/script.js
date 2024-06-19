@@ -7,6 +7,7 @@ const REFRESH_BUTTON = document.querySelector("#refresh-button");
 const REPLAY_BUTTON = document.querySelector("#replay-button");
 const MODAL = document.querySelector(".modal");
 const MODAL_CONTENT = document.querySelector(".modal-content");
+const CONFETTIS_CONTAINER = document.querySelector(".confettis");
 
 let colorIndex;
 let rowIndex;
@@ -86,6 +87,7 @@ function checking() {
 			checkButtonDesactivation();
 			MODAL.style.display = "flex";
 			MODAL_CONTENT.children[0].innerText = "YOU WON";
+			CONFETTIS_CONTAINER.style.display = "block";
 			modalContentFilling();
 			modalClosing();
 		} else {
@@ -205,12 +207,14 @@ function replayButtonActivation(button) {
 function modalContentFilling() {
 	MODAL_CONTENT.children[1].innerHTML = `The pattern was: <div class="peg" style="background-color:${computerOriginal[0]}"></div><div class="peg" style="background-color:${computerOriginal[1]}"></div><div class="peg" style="background-color:${computerOriginal[2]}"></div><div class="peg" style="background-color:${computerOriginal[3]}"></div><br>
     Click on replay to try again.`;
+	MODAL_CONTENT.children[3].style.display = "block";
 	replayButtonActivation(MODAL_CONTENT.children[3]);
 }
 
 function modalClosing() {
 	MODAL_CONTENT.children[2].addEventListener("click", () => {
 		MODAL.style.display = "none";
+		CONFETTIS_CONTAINER.style.display= "none";
 	});
 	window.addEventListener("click", modalClosingThroughWindow);
 }
@@ -218,5 +222,6 @@ function modalClosing() {
 function modalClosingThroughWindow(e) {
 	if (e.target == MODAL) {
 		MODAL.style.display = "none";
+		CONFETTIS_CONTAINER.style.display= "none";
 	}
 }
