@@ -201,6 +201,7 @@ function replayButtonActivation(button) {
 		rowDesactivation();
 		gameInitialization();
 		if (MODAL.style.display !== "none") {MODAL.style.display = "none";}
+		CONFETTIS_CONTAINER.style.display= "none";
 	});
 }
 
